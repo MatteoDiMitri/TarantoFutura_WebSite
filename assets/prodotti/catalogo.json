@@ -1,0 +1,110 @@
+{
+  "_nota": "PREZZI E MISURE DA CONFERMARE. Questo file e' l'unico posto da toccare per cambiare il negozio: prezzo, descrizione, misura, disponibilita'. ratio: la forma della foto (larghezza / altezza). fondo: il colore dello sfondo della foto (ora uguale per tutte, dato da tools/sfondo-prodotti.py). formato: resta come etichetta, la griglia non lo usa. Le foto vanno tutte nella stessa forma, 760x663: se ne arriva una diversa va riquadrata prima, o nel catalogo si vedra' piu' piccola delle altre.",
+  "valuta": "EUR",
+  "prodotti": [
+    {
+      "slug": "sciarpa",
+      "nome": "Sciarpa",
+      "tipo": "tessile",
+      "formato": "largo",
+      "prezzo": 25,
+      "immagine": "sciarpa.webp",
+      "ratio": "760 / 663",
+      "fondo": "#e8e0cf",
+      "descrizione": "Jacquard rosso e blu, le figure della citta' a scacchi e le frange in fondo. Da stadio.",
+      "misura": "",
+      "esaurito": false
+    },
+    {
+      "slug": "carte-tarantine",
+      "nome": "Carte Tarantine",
+      "tipo": "gioco",
+      "formato": "normale",
+      "prezzo": 18,
+      "immagine": "carte-tarantine.webp",
+      "ratio": "760 / 663",
+      "fondo": "#e8e0cf",
+      "descrizione": "Il mazzo da gioco di fama tarantina, nella sua scatola. Al posto di re e regine, le figure di Taranto.",
+      "misura": "",
+      "esaurito": false
+    },
+    {
+      "slug": "poster-sirena",
+      "nome": "Poster Sirena",
+      "tipo": "stampa",
+      "formato": "normale",
+      "prezzo": 15,
+      "immagine": "poster-sirena.webp",
+      "ratio": "760 / 663",
+      "fondo": "#e8e0cf",
+      "descrizione": "Stampa su carta. Lo sguardo che esce dall'acqua, il mare a righe.",
+      "misura": "",
+      "esaurito": false
+    },
+    {
+      "slug": "poster-santerasmo",
+      "nome": "Poster Sant'Erasmo",
+      "tipo": "stampa",
+      "formato": "normale",
+      "prezzo": 15,
+      "immagine": "poster-santerasmo.webp",
+      "ratio": "760 / 663",
+      "fondo": "#e8e0cf",
+      "descrizione": "Stampa su carta. Il ritratto con l'aureola, quattro colori e basta.",
+      "misura": "",
+      "esaurito": false
+    },
+    {
+      "slug": "poster-rosa-dei-venti",
+      "nome": "Poster Rosa dei venti",
+      "tipo": "stampa",
+      "formato": "normale",
+      "prezzo": 15,
+      "immagine": "poster-rosa-dei-venti.webp",
+      "ratio": "760 / 663",
+      "fondo": "#e8e0cf",
+      "descrizione": "Stampa su carta. Tramontana, Levante, Ponente, Ostro: quattro venti, quattro marmi, quattro colori.",
+      "misura": "",
+      "esaurito": false
+    },
+    {
+      "slug": "bandiera",
+      "nome": "Bandiera",
+      "tipo": "tessile",
+      "formato": "largo",
+      "prezzo": 30,
+      "immagine": "bandiera.webp",
+      "ratio": "760 / 663",
+      "fondo": "#e8e0cf",
+      "descrizione": "Scacchi rosso e blu, il lettering pieno al centro. Da balcone o da corteo.",
+      "misura": "",
+      "esaurito": false
+    },
+    {
+      "slug": "tote-bag",
+      "nome": "Tote bag",
+      "tipo": "tessile",
+      "formato": "normale",
+      "prezzo": 18,
+      "immagine": "tote-bag.webp",
+      "ratio": "760 / 663",
+      "fondo": "#e8e0cf",
+      "descrizione": "Cotone nero, il sole stampato in blu e il marchio in basso.",
+      "misura": "",
+      "esaurito": false
+    },
+    {
+      "slug": "sticker-pack",
+      "nome": "Sticker pack",
+      "tipo": "adesivi",
+      "formato": "normale",
+      "prezzo": 5,
+      "immagine": "sticker-pack.webp",
+      "ratio": "760 / 663",
+      "fondo": "#e8e0cf",
+      "descrizione": "Tutti i nostri adesivi in una busta: il sole, la sirena, il santo, i venti, gli scacchi.",
+      "misura": "",
+      "esaurito": false
+    }
+  ]
+}
