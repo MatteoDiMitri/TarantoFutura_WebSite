@@ -1,0 +1,74 @@
+{
+  "kat-27-08": {
+    "quando": "27 agosto",
+    "data": "2026-08-27",
+    "foto": [
+      "01.webp",
+      "02.webp",
+      "03.webp",
+      "04.webp",
+      "05.webp",
+      "06.webp",
+      "07.webp",
+      "08.webp"
+    ]
+  },
+  "boat-party": {
+    "quando": "19 agosto",
+    "data": "2026-08-19",
+    "foto": [
+      "01.webp",
+      "02.webp",
+      "03.webp",
+      "04.webp",
+      "05.webp",
+      "06.webp",
+      "07.webp",
+      "08.webp",
+      "09.webp"
+    ]
+  },
+  "kat-2": {
+    "quando": "6 agosto",
+    "data": "2026-08-06",
+    "foto": [
+      "01.webp",
+      "02.webp",
+      "03.webp",
+      "04.webp",
+      "05.webp",
+      "06.webp",
+      "07.webp",
+      "08.webp",
+      "09.webp"
+    ]
+  },
+  "swga": {
+    "quando": "30 luglio",
+    "data": "2026-07-30",
+    "foto": [
+      "01.webp",
+      "02.webp",
+      "03.webp",
+      "04.webp",
+      "05.webp",
+      "06.webp",
+      "07.webp",
+      "08.webp",
+      "09.webp"
+    ]
+  },
+  "ta-festival": {
+    "quando": "30 giugno",
+    "data": "2026-06-30",
+    "foto": [
+      "01.webp",
+      "02.webp",
+      "03.webp",
+      "04.webp",
+      "05.webp",
+      "06.webp",
+      "07.webp"
+    ]
+  }
+}
