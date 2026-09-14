@@ -130,7 +130,7 @@ html.js [data-entra='colonna'] {
   opacity: 1;
   transform: none;
   clip-path: inset(0 0 100% 0);
-  transition: clip-path 0.72s var(--tf-ease) var(--entra-passo, 0ms);
+  transition: clip-path 0.6s var(--tf-ease) var(--entra-passo, 0ms);
 }
 html.js [data-entra='colonna'].is-dentro {
   clip-path: inset(0 0 0 0);
@@ -2838,75 +2838,4 @@ html.is-sorpresa, html.is-sorpresa body { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .sorpresa { transition: none; }
   .sorpresa__foto { transition: none; transform: none; }
-}
-
-/* ==========================================================================
-   Il cursore
-   Un anello che insegue il puntatore e si allarga su cio' che si puo'
-   toccare. Non sostituisce la freccia del sistema: le sta intorno, e il
-   documento lo crea src/js/cursore.js solo quando si muove un mouse vero.
-   Il bianco in "difference" e' una scelta: sul grigio dell'apertura, sul blu
-   di About us, sul crema della fascia, sul rosso della fanzine e sul panna
-   dello shop si legge uguale, senza una tinta per sezione.
-   ========================================================================== */
-.cursore {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 300;          /* sopra ogni cosa, sorpresa compresa */
-  pointer-events: none;  /* non deve mai rubare un click */
-  opacity: 0;
-  transition: opacity 0.3s var(--tf-ease);
-  will-change: transform;
-  /* La fusione va qui e non sui due segni dentro: con uno z-index questo
-     elemento fa stackingcontext per conto suo, e un figlio che si fonde si
-     troverebbe davanti al nulla invece che davanti alla pagina. */
-  mix-blend-mode: difference;
-}
-.cursore.is-acceso { opacity: 1; }
-
-/* I due segni si centrano da soli: la posizione del gruppo la scrive il JS
-   e deve restare una traslazione pulita, senza correzioni dentro. */
-.cursore__anello,
-.cursore__punto {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(var(--scala, 1));
-  transition: width 0.3s var(--tf-ease), height 0.3s var(--tf-ease),
-              opacity 0.3s var(--tf-ease), transform 0.25s var(--tf-ease),
-              border-color 0.3s var(--tf-ease);
-}
-.cursore__anello {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #fff;
-}
-/* Il punto sta fermo al centro dell'anello: e' il riferimento che dice dove
-   si trova davvero il puntatore mentre l'anello lo rincorre. */
-.cursore__punto {
-  width: 4px;
-  height: 4px;
-  background: #fff;
-}
-
-/* Su cio' che si puo' toccare l'anello si apre e il punto si ritira dentro. */
-.cursore.is-sopra .cursore__anello { width: 56px; height: 56px; }
-.cursore.is-sopra .cursore__punto  { opacity: 0; }
-
-/* Alla pressione rientra: e' il gesto che conferma il click. */
-.cursore.is-premuto { --scala: 0.82; }
-
-/* Chi ha chiesto meno movimento non se lo ritrova nemmeno: il modulo non si
-   monta. La regola resta come rete se l'impostazione cambia a pagina aperta. */
-@media (prefers-reduced-motion: reduce) {
-  .cursore { display: none; }
-}
-
-/* Senza un mouse vero non serve, e su uno schermo tattile l'anello resterebbe
-   appeso all'ultimo punto toccato. */
-@media (hover: none), (pointer: coarse) {
-  .cursore { display: none; }
 }

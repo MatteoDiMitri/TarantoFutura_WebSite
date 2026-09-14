@@ -15,7 +15,6 @@ import { mountContatori } from './contatore.js';
 import { mountSorpresa } from './sorpresa.js';
 import { mountComparse } from './comparse.js';
 import { mountTrio } from './trio.js';
-import { mountCursore } from './cursore.js';
 
 const html = document.documentElement;
 const introRoot = document.querySelector('.intro');
@@ -92,12 +91,10 @@ window.tfContatori = mountContatori();
 
 window.tfSorpresa = mountSorpresa();
 
-/* Le tre cose che riguardano il percorso principale, non una sua sezione:
-   le voci che entrano scorrendo, la mano sulle colonne, l'anello che segue
-   il puntatore. Vanno per ultime: nessuna di loro serve a far funzionare
-   qualcosa, e se una fallisse il resto della pagina e' gia' in piedi. */
+/* Le due cose che riguardano il percorso principale e non una sua sezione:
+   le voci che entrano scorrendo e la mano sulle colonne. Vanno per ultime:
+   nessuna delle due serve a far funzionare qualcosa, e se una fallisse il
+   resto della pagina e' gia' in piedi. */
 window.tfComparse = mountComparse();
 
 window.tfTrio = mountTrio(document.querySelector('.trio'));
-
-window.tfCursore = mountCursore();

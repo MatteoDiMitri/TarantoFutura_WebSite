@@ -23,12 +23,15 @@ const PASSO_MAX = 6;
 
 /* Due soglie, perche' le due entrate hanno bisogni opposti.
    Il testo deve comparire davanti agli occhi: parte quando si affaccia.
-   Le colonne invece restano arrotolate fino all'onda, e una schermata intera
-   di solo fondo pagina si nota: partono mentre sono ancora sotto la piega,
-   cosi' quando arrivi sono gia' aperte. */
+   Le colonne aspettano di piu'. Sono alte una schermata e si srotolano
+   dall'alto: se partissero mentre sono ancora sotto la piega - come facevano
+   in un primo momento, per non far trovare a chi scorre veloce una schermata
+   di solo fondo - finirebbero fuori campo, e chi arriva le troverebbe gia'
+   aperte senza aver visto niente. Meglio farle partire quando sono gia' in
+   vista per un buon terzo: l'onda avviene sotto gli occhi, ed e' il punto. */
 const SOGLIE = {
   testo:   '0px 0px -10% 0px',
-  colonna: '0px 0px 25% 0px'
+  colonna: '0px 0px -35% 0px'
 };
 
 export class Comparse {
@@ -117,15 +120,18 @@ export class Comparse {
     this.gruppi.clear();
   }
 
-  /* Quello che al montaggio e' gia' in schermo, o gia' passato sopra, non
-     aspetta: chi ricarica a meta' pagina si troverebbe davanti al vuoto, e
-     risalendo vedrebbe entrare cose che per lui c'erano gia'. Vale tutto
-     cio' che comincia sopra il bordo basso della finestra: sotto quello si
-     deve ancora scendere, ed e' li' che l'onda ha senso. */
+  /* Quello che e' gia' passato non aspetta: chi ricarica a meta' pagina si
+     troverebbe davanti al vuoto, e risalendo vedrebbe entrare cose che per
+     lui c'erano gia'.
+     Il confine e' la meta' dello schermo, non il bordo basso. Col bordo
+     basso bastava un primo scatto deciso verso il basso - e questo controllo
+     gira anche al primo scorrimento - perche' una sezione appena affacciata
+     venisse dichiarata "gia' vista" e comparisse senza la sua onda. Sopra la
+     meta' sei arrivato davvero; sotto, stai ancora scendendo. */
   giaViste() {
     const h = window.innerHeight || document.documentElement.clientHeight;
     for (const [voce, s] of Array.from(this.sentinelle)) {
-      if (voce.getBoundingClientRect().top >= h) continue;
+      if (voce.getBoundingClientRect().top >= h * 0.5) continue;
       s.io.unobserve(voce);
       this.onda(s.sez);
     }
