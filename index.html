@@ -13,7 +13,7 @@
   <link rel="preload" href="assets/data/logo-contours.json?v=2" as="fetch" type="application/json" crossorigin>
   <link rel="modulepreload" href="vendor/three.module.min.js">
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="src/css/style.css?v=104">
+  <link rel="stylesheet" href="src/css/style.css?v=105">
 </head>
 <body>
   <h1 class="tf-sr">Taranto Futura</h1>
@@ -89,30 +89,30 @@
 
   <section class="about" id="chi-siamo">
     <div class="about__inner">
-      <p class="about__eyebrow">ABOUT US</p>
+      <p class="about__eyebrow" data-entra>ABOUT US</p>
 
-      <p class="about__kicker">Taranto Futura è una domanda:</p>
-      <p class="about__lead">e se invece di aspettare che qualcuno cambi la nostra
+      <p class="about__kicker" data-entra>Taranto Futura è una domanda:</p>
+      <p class="about__lead" data-entra>e se invece di aspettare che qualcuno cambi la nostra
         città, iniziassimo a fare qualcosa noi?</p>
 
       <div class="about__body">
-        <p>Siamo un gruppo di ragazzi uniti dalla voglia di <b>vivere Taranto in modo
+        <p data-entra>Siamo un gruppo di ragazzi uniti dalla voglia di <b>vivere Taranto in modo
           diverso</b>, creando occasioni, eventi, idee e connessioni tra le persone.</p>
 
-        <p>Crediamo che una città non sia fatta soltanto di strade, palazzi e monumenti,
+        <p data-entra>Crediamo che una città non sia fatta soltanto di strade, palazzi e monumenti,
           ma soprattutto <b>da chi decide di viverla</b>, immaginarla e renderla più
           interessante.</p>
 
-        <p>Non abbiamo la presunzione di salvare Taranto né formule magiche per
+        <p data-entra>Non abbiamo la presunzione di salvare Taranto né formule magiche per
           cambiarla, ma crediamo che il futuro non arrivi da solo:
           <b>si costruisce, un’idea alla volta.</b></p>
 
-        <p>Per questo abbiamo deciso di <b>smettere di aspettare e iniziare a
+        <p data-entra>Per questo abbiamo deciso di <b>smettere di aspettare e iniziare a
           muoverci</b>. Perché forse, invece di essere quelli che dicono che qui non
           c’è niente, possiamo essere <b>quelli che iniziano a creare qualcosa</b>.</p>
       </div>
 
-      <p class="about__close">
+      <p class="about__close" data-entra>
         Questa è Taranto Futura.
         <span class="about__close-sub">E siamo solo all’inizio !</span>
       </p>
@@ -129,8 +129,8 @@
        il CSS, uno solo per tutti. Il nastro lo duplica fascia.js; senza JS
        resta una fila ferma, che si scorre col dito. -->
   <section class="fascia" aria-labelledby="fascia-t">
-    <p class="fascia__occhiello" id="fascia-t">Abbiamo lavorato con</p>
-    <div class="fascia__pista">
+    <p class="fascia__occhiello" id="fascia-t" data-entra>Abbiamo lavorato con</p>
+    <div class="fascia__pista" data-entra>
       <ul class="fascia__nastro">
         <li class="fascia__voce">
           <span class="fascia__logo e-kat" aria-hidden="true"></span>
@@ -171,24 +171,28 @@
   </section>
 
   <section class="trio" id="cosa-facciamo">
-      <a class="trio__voce" href="#studio" data-pannello="studio">
+      <a class="trio__voce" href="#studio" data-pannello="studio" data-entra="colonna">
         <span class="trio__motivo" aria-hidden="true"><svg viewBox="0 0 240 300" fill="none" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><path fill="rgba(255,255,255,0.13)" d="M247.6 46.4Q239.8 62 242.6 74.9Q245.3 87.9 234.6 95.1Q223.8 102.3 213.4 110.9Q203 119.6 189.1 118.3Q175.1 117.1 171.7 101.8Q168.2 86.6 165.1 78.5Q161.9 70.4 146.4 58.2Q130.8 45.9 146.7 39.2Q162.6 32.4 171.5 26.8Q180.5 21.2 192.7 5.2Q204.8 -10.7 215.4 3.9Q226 18.5 240.7 24.7Q255.4 30.8 247.6 46.4Z"/><path fill="rgba(186,200,236,0.16)" d="M95 166.8Q100.2 176 99.1 187.6Q98 199.1 92.9 213.4Q87.8 227.7 72.9 223.2Q58 218.7 46.9 216.5Q35.9 214.4 26.5 207Q17.1 199.6 21.4 187.8Q25.7 176 22.6 164.9Q19.5 153.8 26.6 143.8Q33.6 133.7 45.8 127.5Q58 121.2 65.2 136Q72.5 150.9 81.2 154.3Q89.8 157.6 95 166.8Z"/><path fill="rgba(255,255,255,0.09)" d="M178 203.2Q184.8 210 183.2 220.2Q181.7 230.4 172.2 234.1Q162.7 237.8 154.2 238.9Q145.7 240 139 235.3Q132.2 230.5 120.3 226.4Q108.3 222.2 117.5 212.7Q126.7 203.2 131.6 198.8Q136.6 194.5 141.6 190.6Q146.6 186.7 153.2 187.6Q159.8 188.6 165.5 192.4Q171.3 196.3 178 203.2Z"/><ellipse cx="81.2" cy="55" rx="3.9" ry="4" fill="rgba(186,200,236,0.08)"/><ellipse cx="90.5" cy="29.8" rx="3.3" ry="3.2" fill="rgba(255,255,255,0.08)"/><ellipse cx="25.4" cy="38.7" rx="3" ry="2.3" fill="rgba(255,255,255,0.19)"/><ellipse cx="59.1" cy="184.7" rx="5" ry="4.7" fill="rgba(186,200,236,0.16)"/><ellipse cx="224.8" cy="26.7" rx="4.7" ry="3.7" fill="rgba(255,255,255,0.11)"/><ellipse cx="35.9" cy="97.9" rx="4.5" ry="4.7" fill="rgba(255,255,255,0.10)"/><ellipse cx="150.6" cy="115.3" rx="3.5" ry="2.6" fill="rgba(186,200,236,0.08)"/><ellipse cx="55.3" cy="199.1" rx="3" ry="3.2" fill="rgba(255,255,255,0.12)"/><ellipse cx="109.7" cy="95.5" rx="4.4" ry="3.7" fill="rgba(255,255,255,0.17)"/><ellipse cx="136.4" cy="156.9" rx="4.7" ry="4.1" fill="rgba(186,200,236,0.18)"/><ellipse cx="225.6" cy="46.1" rx="3" ry="2.4" fill="rgba(255,255,255,0.18)"/><ellipse cx="117.6" cy="24.7" rx="3.9" ry="4.1" fill="rgba(255,255,255,0.18)"/><ellipse cx="202.6" cy="99.3" rx="4" ry="4.2" fill="rgba(186,200,236,0.16)"/><ellipse cx="110.4" cy="242.5" rx="5" ry="5.5" fill="rgba(255,255,255,0.14)"/><ellipse cx="23.3" cy="204.8" rx="3.9" ry="4.6" fill="rgba(255,255,255,0.22)"/><ellipse cx="72.6" cy="118.9" rx="3.9" ry="3.9" fill="rgba(186,200,236,0.07)"/><ellipse cx="47" cy="45.9" rx="1.6" ry="1.3" fill="rgba(255,255,255,0.19)"/><ellipse cx="64.5" cy="120.3" rx="4.7" ry="4.6" fill="rgba(255,255,255,0.08)"/><ellipse cx="130.9" cy="254.3" rx="4.5" ry="3.9" fill="rgba(186,200,236,0.20)"/><ellipse cx="101.4" cy="111.6" rx="4.8" ry="3.8" fill="rgba(255,255,255,0.21)"/><ellipse cx="48.8" cy="77.1" rx="2.3" ry="2.4" fill="rgba(255,255,255,0.14)"/><ellipse cx="67.8" cy="15.1" rx="3" ry="3.1" fill="rgba(186,200,236,0.13)"/><ellipse cx="219.7" cy="201.8" rx="3.4" ry="3.7" fill="rgba(255,255,255,0.16)"/><ellipse cx="21.9" cy="258.7" rx="4.4" ry="5.1" fill="rgba(255,255,255,0.20)"/><ellipse cx="96.3" cy="122.5" rx="1.8" ry="1.3" fill="rgba(186,200,236,0.17)"/><ellipse cx="24.8" cy="70.8" rx="2" ry="1.5" fill="rgba(255,255,255,0.12)"/><path fill="rgba(255,255,255,0.10)" d="M196 108 q3 26 1 44 q-2 16 3 24 q4 7 1 12 q-4 4 -7 -2 q-5 -10 -4 -26 q1 -28 6 -52 Z"/></svg></span>
+        <span class="trio__luce" aria-hidden="true"></span>
         <span class="trio__titolo">Creative<br>Studio</span>
         <span class="trio__apri" aria-hidden="true">Apri</span>
       </a>
 
-      <a class="trio__voce" href="#eventi" data-pannello="eventi">
+      <a class="trio__voce" href="#eventi" data-pannello="eventi" data-entra="colonna">
+        <span class="trio__luce" aria-hidden="true"></span>
         <span class="trio__titolo">Events</span>
         <span class="trio__apri" aria-hidden="true">Apri</span>
       </a>
 
-      <a class="trio__voce" href="#fanzine" data-pannello="fanzine">
+      <a class="trio__voce" href="#fanzine" data-pannello="fanzine" data-entra="colonna">
         <span class="trio__motivo" aria-hidden="true"><svg viewBox="0 0 300 900" fill="none" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><g stroke="currentColor" stroke-width="1" opacity="0.85"><path d="M0 -11.5 L300 -11.5" vector-effect="non-scaling-stroke"/><path d="M0 0.0 L300 0.0" vector-effect="non-scaling-stroke"/><path d="M0 11.5 L300 11.5" vector-effect="non-scaling-stroke"/><path d="M0 23.0 L300 23.0" vector-effect="non-scaling-stroke"/><path d="M0 34.5 L300 34.5" vector-effect="non-scaling-stroke"/><path d="M0 46.0 L300 46.0" vector-effect="non-scaling-stroke"/><path d="M0 57.5 L300 57.5" vector-effect="non-scaling-stroke"/><path d="M0 69.0 L300 69.0" vector-effect="non-scaling-stroke"/><path d="M0 80.5 L300 80.5" vector-effect="non-scaling-stroke"/><path d="M0 92.0 L300 92.0" vector-effect="non-scaling-stroke"/><path d="M0 103.5 L300 103.5" vector-effect="non-scaling-stroke"/><path d="M0 115.0 L300 115.0" vector-effect="non-scaling-stroke"/><path d="M0 126.5 L300 126.5" vector-effect="non-scaling-stroke"/><path d="M0 138.0 L300 138.0" vector-effect="non-scaling-stroke"/><path d="M0 149.5 L300 149.5" vector-effect="non-scaling-stroke"/><path d="M0 161.0 L300 161.0" vector-effect="non-scaling-stroke"/><path d="M0 172.5 L300 172.5" vector-effect="non-scaling-stroke"/><path d="M0 184.0 L300 184.0" vector-effect="non-scaling-stroke"/><path d="M0 195.5 L300 195.5" vector-effect="non-scaling-stroke"/><path d="M0 207.0 L300 207.0" vector-effect="non-scaling-stroke"/><path d="M0 218.5 L300 218.5" vector-effect="non-scaling-stroke"/><path d="M0 230.0 L300 230.0" vector-effect="non-scaling-stroke"/><path d="M0 241.5 L300 241.5" vector-effect="non-scaling-stroke"/><path d="M0 253.0 L300 253.0" vector-effect="non-scaling-stroke"/><path d="M0 264.5 L300 264.5" vector-effect="non-scaling-stroke"/><path d="M0 276.0 L300 276.0" vector-effect="non-scaling-stroke"/><path d="M0 287.5 L300 287.5" vector-effect="non-scaling-stroke"/><path d="M0 299.0 L300 299.0" vector-effect="non-scaling-stroke"/><path d="M0 310.5 L300 310.5" vector-effect="non-scaling-stroke"/><path d="M0 322.0 L300 322.0" vector-effect="non-scaling-stroke"/><path d="M0 333.5 L300 333.5" vector-effect="non-scaling-stroke"/><path d="M0 345.0 L300 345.0" vector-effect="non-scaling-stroke"/><path d="M0 356.5 L300 356.5" vector-effect="non-scaling-stroke"/><path d="M0 368.0 L300 368.0" vector-effect="non-scaling-stroke"/><path d="M0 379.5 L300 379.5" vector-effect="non-scaling-stroke"/><path d="M0 391.0 L300 391.0" vector-effect="non-scaling-stroke"/><path d="M0 402.5 L300 402.5" vector-effect="non-scaling-stroke"/><path d="M0 414.0 L300 414.0" vector-effect="non-scaling-stroke"/><path d="M0 425.5 L300 425.5" vector-effect="non-scaling-stroke"/><path d="M0 437.0 L300 437.0" vector-effect="non-scaling-stroke"/><path d="M0 448.5 L300 448.5" vector-effect="non-scaling-stroke"/><path d="M0 460.0 L300 460.0" vector-effect="non-scaling-stroke"/><path d="M0 471.5 L300 471.5" vector-effect="non-scaling-stroke"/><path d="M0 483.0 L300 483.0" vector-effect="non-scaling-stroke"/><path d="M0 494.5 L300 494.5" vector-effect="non-scaling-stroke"/><path d="M0 506.0 L300 506.0" vector-effect="non-scaling-stroke"/><path d="M0 517.5 L300 517.5" vector-effect="non-scaling-stroke"/><path d="M0 529.0 L300 529.0" vector-effect="non-scaling-stroke"/><path d="M0 540.5 L300 540.5" vector-effect="non-scaling-stroke"/><path d="M0 552.0 L300 552.0" vector-effect="non-scaling-stroke"/><path d="M0 563.5 L300 563.5" vector-effect="non-scaling-stroke"/><path d="M0 575.0 L300 575.0" vector-effect="non-scaling-stroke"/><path d="M0 586.5 L300 586.5" vector-effect="non-scaling-stroke"/><path d="M0 598.0 L300 598.0" vector-effect="non-scaling-stroke"/><path d="M0 609.5 L300 609.5" vector-effect="non-scaling-stroke"/><path d="M0 621.0 L300 621.0" vector-effect="non-scaling-stroke"/><path d="M0 632.5 L300 632.5" vector-effect="non-scaling-stroke"/><path d="M0 644.0 L300 644.0" vector-effect="non-scaling-stroke"/><path d="M0 655.5 L300 655.5" vector-effect="non-scaling-stroke"/><path d="M0 667.0 L300 667.0" vector-effect="non-scaling-stroke"/><path d="M0 678.5 L300 678.5" vector-effect="non-scaling-stroke"/><path d="M0 690.0 L300 690.0" vector-effect="non-scaling-stroke"/><path d="M0 701.5 L300 701.5" vector-effect="non-scaling-stroke"/><path d="M0 713.0 L300 713.0" vector-effect="non-scaling-stroke"/><path d="M0 724.5 L300 724.5" vector-effect="non-scaling-stroke"/><path d="M0 736.0 L300 736.0" vector-effect="non-scaling-stroke"/><path d="M0 747.5 L300 747.5" vector-effect="non-scaling-stroke"/><path d="M0 759.0 L300 759.0" vector-effect="non-scaling-stroke"/><path d="M0 770.5 L300 770.5" vector-effect="non-scaling-stroke"/><path d="M0 782.0 L300 782.0" vector-effect="non-scaling-stroke"/><path d="M0 793.5 L300 793.5" vector-effect="non-scaling-stroke"/><path d="M0 805.0 L300 805.0" vector-effect="non-scaling-stroke"/><path d="M0 816.5 L300 816.5" vector-effect="non-scaling-stroke"/><path d="M0 828.0 L300 828.0" vector-effect="non-scaling-stroke"/><path d="M0 839.5 L300 839.5" vector-effect="non-scaling-stroke"/><path d="M0 851.0 L300 851.0" vector-effect="non-scaling-stroke"/><path d="M0 862.5 L300 862.5" vector-effect="non-scaling-stroke"/><path d="M0 874.0 L300 874.0" vector-effect="non-scaling-stroke"/><path d="M0 885.5 L300 885.5" vector-effect="non-scaling-stroke"/><path d="M0 897.0 L300 897.0" vector-effect="non-scaling-stroke"/><path d="M0 908.5 L300 908.5" vector-effect="non-scaling-stroke"/><path d="M0 920.0 L300 920.0" vector-effect="non-scaling-stroke"/><path d="M0 931.5 L300 931.5" vector-effect="non-scaling-stroke"/></g><g stroke="currentColor" stroke-width="1" opacity="0.85"><circle cx="150.0" cy="720.0" r="11.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="22.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="33.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="44.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="55.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="66.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="77.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="88.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="99.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="110.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="121.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="132.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="143.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="154.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="165.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="176.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="187.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="198.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="209.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="220.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="231.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="242.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="253.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="264.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="275.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="286.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="297.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="308.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="319.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="330.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="341.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="352.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="363.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="374.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="385.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="396.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="407.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="418.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="429.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="440.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="451.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="462.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="473.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="484.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="495.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="506.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="517.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="528.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="539.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="550.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="561.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="572.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="583.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="594.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="605.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="616.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="627.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="638.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="649.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="660.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="671.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="682.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="693.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="704.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="715.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="726.0" vector-effect="non-scaling-stroke"/><circle cx="150.0" cy="720.0" r="737.0" vector-effect="non-scaling-stroke"/></g></svg></span>
+        <span class="trio__luce" aria-hidden="true"></span>
         <span class="trio__titolo">Fanzine</span>
         <span class="trio__apri" aria-hidden="true">Apri</span>
       </a>
 
-      <a class="trio__voce" href="#shop" data-pannello="shop">
+      <a class="trio__voce" href="#shop" data-pannello="shop" data-entra="colonna">
+        <span class="trio__luce" aria-hidden="true"></span>
         <span class="trio__titolo">Shop</span>
         <span class="trio__apri" aria-hidden="true">Apri</span>
       </a>
@@ -427,7 +431,7 @@
     </button>
   </div>
 
-  <script type="module" src="src/js/main.js?v=104"></script>
+  <script type="module" src="src/js/main.js?v=105"></script>
   <noscript>
     <p style="position:fixed;left:0;right:0;bottom:24px;text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#23264d">
       Attiva JavaScript per vedere l'apertura
