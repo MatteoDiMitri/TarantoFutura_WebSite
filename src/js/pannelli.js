@@ -17,6 +17,9 @@ export class Pannelli {
     this.aperto = null;      // id del pannello aperto
     this.tornaA = null;      // elemento a cui restituire il fuoco
     this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.uscita = null;      // pannello che si sta ancora richiudendo
+    this.arrivo = null;      // ascoltatore di fine ritiro
+    this.attesa = 0;         // tempo di sicurezza del ritiro
 
     this.ids = new Set(this.voci.map((v) => v.dataset.pannello));
   }
@@ -72,7 +75,13 @@ export class Pannelli {
     this.tornaA = origine || document.activeElement;
     this.aperto = id;
 
+    /* Se e' proprio questo che si stava richiudendo, la ritirata si taglia
+       qui: chi ci ripensa a meta' strada non deve aspettare la fine. Un
+       pannello diverso invece continua a uscire per conto suo, sotto. */
+    if (this.uscita === el) this.fineRitiro();
+
     this.bloccaScorrimento(true);
+    el.removeAttribute('aria-hidden');
     el.setAttribute('role', 'dialog');
     el.setAttribute('aria-modal', 'true');
     this.ritaglioDa(el, origine, subito);
@@ -120,11 +129,6 @@ export class Pannelli {
     const el = this.pannello(id);
     this.aperto = null;
 
-    if (el) {
-      el.classList.remove('is-aperto', 'is-dentro');
-      el.removeAttribute('role');
-      el.removeAttribute('aria-modal');
-    }
     this.bloccaScorrimento(false);
 
     if (indietro && location.hash.slice(1) === id) {
@@ -132,11 +136,59 @@ export class Pannelli {
       history.pushState({}, '', location.pathname + location.search);
     }
 
+    /* Il fuoco esce prima che il pannello diventi aria-hidden: nasconderlo
+       a un lettore di schermo mentre contiene il punto attivo e' un errore. */
     if (this.tornaA && document.contains(this.tornaA)) {
       this.tornaA.focus({ preventScroll: true });
     }
     this.tornaA = null;
+
+    if (el) this.ritiro(el);
     document.documentElement.dispatchEvent(new CustomEvent('pannello:chiudi'));
+  }
+
+  /* Il pannello non sparisce di colpo: torna dentro la colonna da cui era
+     nato. Il ritaglio di partenza e' ancora sull'elemento, quindi basta
+     togliere is-dentro e aspettare che la transizione arrivi in fondo.
+     Nel frattempo non intercetta piu' il puntatore e sta sotto a un
+     eventuale pannello che si stia aprendo al suo posto. */
+  ritiro(el) {
+    el.removeAttribute('role');
+    el.removeAttribute('aria-modal');
+    el.setAttribute('aria-hidden', 'true');
+    el.classList.remove('is-dentro');
+
+    // senza ritaglio da cui ripartire non c'e' niente da guardare
+    const fermo = this.reduced || !el.style.getPropertyValue('--ct');
+    if (fermo) { this.spegni(el); return; }
+
+    el.classList.add('is-uscita');
+    this.uscita = el;
+
+    const arrivo = (e) => {
+      if (e.target !== el || e.propertyName !== 'clip-path') return;
+      this.fineRitiro();
+    };
+    el.addEventListener('transitionend', arrivo);
+    this.arrivo = arrivo;
+
+    /* Se la transizione non arriva mai (scheda in secondo piano, pannello
+       gia' a schermo pieno) il pannello resterebbe li' sopra a tutto. */
+    this.attesa = setTimeout(() => this.fineRitiro(), 700);
+  }
+
+  fineRitiro() {
+    const el = this.uscita;
+    if (this.attesa) { clearTimeout(this.attesa); this.attesa = 0; }
+    if (!el) return;
+    if (this.arrivo) { el.removeEventListener('transitionend', this.arrivo); this.arrivo = null; }
+    this.uscita = null;
+    el.classList.remove('is-uscita');
+    this.spegni(el);
+  }
+
+  spegni(el) {
+    el.classList.remove('is-aperto', 'is-dentro', 'is-uscita');
   }
 
   /* --------------------------------------------------------------- fuoco */
